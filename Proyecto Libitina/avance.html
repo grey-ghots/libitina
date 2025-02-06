@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avance del Proyecto Libitina</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            background-color: #0d0d0d; /* Fondo oscuro */
+            color: #e6e6e6; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1a1a1a; /* Encabezado oscuro */
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            color: #e22d2d;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #262626;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #e6e6e6;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff3e3e;
+        }
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Acceso Restringido</h1>
+        <nav>
+         <a href="libitina.html">Inicio</a>
+         <a href="equipo.html">Equipo</a>
+            <a href="#recursos-humanos">Recursos Humanos</a>
+         <a href="86.html">Nuevos Participantes </a>
+         <a href="distrito.html">Registros</a>
+        </nav>
+    </header>
+<main class="mila">
+    <main id="acceso">
+        <h2>Ingrese la contraseña para acceder</h2>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="verificarAcceso()">Ingresar</button>
+        <p id="mensaje-error" style="color: red; display: none;">Contraseña incorrecta</p>
+    </main>
+
+    <main id="contenido-secreto" style="display: none;">
+        <img src="imagenes/doctora.PNG" alt="Criatura experimental" style="height: 500px;">
+        <h2>Doctora Abigail Shiro Ishii</h2>
+        <p>
+            Doctora Abigail Shiro Ishii conocida por muchos como el angel de la muerte del imperio 0 perdidas de pasientes mas de 1 millo de enfermedades incurables curadas 
+            Ishii es la mejor y mas habil estudiante del doctor Elysius tanto asi que ya ase mucho supero a su maestro no existe enfermedad muy fuerte o herida muy grave si aun vive ella lo puede arreglar 
+            pero solo descrivir su impecable carrera medica seria un insulto para la tercer mejor genetista de la instalacion y quizas del mundo 
+        </p>
+        <div class="informe">
+            <p><strong>Informe #042:</strong> La criatura X-21 ha mostrado una evolución anormal en sus patrones de agresividad...</p>
+        </div>
+        <div class="informe">
+            <img src="" alt="Criatura mutada">
+            <p><strong>Informe #056:</strong> Se ha registrado un cambio inesperado en la estructura genética del espécimen...</p>
+        </div>
+    </main>
+</main>
+    <script>
+        function verificarAcceso() {
+            const password = document.getElementById("password").value;
+            const claveCorrecta = "nil"; //"josef mengele" 
+
+            if (password === claveCorrecta) {
+                document.getElementById("acceso").style.display = "none";
+                document.getElementById("contenido-secreto").style.display = "block";
+            } else {
+                document.getElementById("mensaje-error").style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

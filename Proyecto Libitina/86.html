@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Nuevos Ingresos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('imagenes/default.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 0.5s ease-in-out;
+        }
+
+        .pantalla {
+            background: rgba(0, 0, 0, 0.8);
+            width: 70%;
+            padding: 20px;
+            border-radius: 15px;
+            border: 5px solid rgb(22, 22, 22);
+            box-shadow: 0 0 15px rgba(22, 22, 22, 0.5);
+        }
+
+        .pregunta {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .opciones img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+            border: 3px solid rgb(27, 27, 27);
+            transition: transform 0.2s;
+        }
+
+        .opciones img:hover {
+            transform: scale(1.1);
+        }
+
+        .seccion {
+            display: none;
+        }
+
+        .codigo {
+            font-size: 20px;
+            color: yellow;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .volver {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: red;
+            border: none;
+            cursor: pointer;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pantalla">
+        <h1>Departamento de Nuevos Ingresos</h1>
+
+        <!-- Pregunta de inicio -->
+        <div id="pregunta-inicio" class="seccion">
+            <p class="pregunta">Bienvenido al Proyecto Libitina. ¿Está preparado para iniciar su inducción?</p>
+            <div class="opciones">
+                <img src="imagenes/si.jpeg" onclick="preguntaPasillos(); cambiarFondo('imagenes/pasillo.jpg')">
+                <img src="imagenes/no.jpeg" onclick="window.location.href='libitina.html'">
+            </div>
+        </div>
+
+        <!-- Pregunta sobre los pasillos -->
+        <div id="pregunta-pasillos" class="seccion">
+            <p class="pregunta">Caminas por los laberínticos pasillos hasta llegar a un despacho con la leyenda "Inducciones" quieres tocar antes de entrar o simplemente seguir.</p>
+            <div class="opciones">
+                <img src="imagenes/tocar_puerta.jpg" onclick="preguntaSexo(); cambiarFondo('imagenes/despacho.jpg')">
+                <img src="imagenes/entrar_sin_tocar.jpg" onclick="preguntaDisculparse(); cambiarFondo('imagenes/despacho.jpg')">
+            </div>
+        </div>
+
+        <!-- Pregunta sobre la falta de educación al entrar sin tocar -->
+        <div id="pregunta-disculparse" class="seccion">
+            <p class="pregunta">es bastante descortes de su parte entrar si tocar primero</p>
+            <div class="opciones">
+                <img src="imagenes/perdon.jpeg" onclick="preguntaSexo(); cambiarFondo('imagenes/despacho.jpg')">
+            </div>
+        </div>
+
+        <!-- Pregunta sobre el sexo -->
+        <div id="pregunta-sexo" class="seccion">
+            <p class="pregunta">ya que llegaste tengo unas preguntas parati primero ¿Cuál es tu sexo?</p>
+            <div class="opciones">
+                <img src="imagenes/hombre.jpeg" onclick="preguntaRaza()">
+                <img src="imagenes/mujer.jpeg" onclick="preguntaRaza()">
+            </div>
+        </div>
+
+        <!-- Pregunta sobre la raza -->
+        <div id="pregunta-raza" class="seccion">
+            <p class="pregunta">siguiente pregunta ¿Tú y tus padres son humanos o perteneces a otra raza que sea mágica?</p>
+            <div class="opciones">
+                <img src="imagenes/humano.jpeg" onclick="preguntaImagen()">
+                <img src="imagenes/magico.jpeg" onclick="window.location.reload()">
+            </div>
+        </div>
+
+        <!-- Pregunta de elección de imágenes -->
+        <div id="pregunta-imagen" class="seccion">
+            <p class="pregunta">¿Cuál de estas imágenes te llama más la atención?</p>
+            <div class="opciones">
+                <img src="imagenes/magia.jpeg" onclick="preguntaAnimales(); cambiarFondo('imagenes/medicina.jpeg')">
+                <img src="imagenes/guerra.jpeg" onclick="preguntaGuerra(); cambiarFondo('imagenes/guerra.jpg')">
+                <img src="imagenes/cientifico.jpeg" onclick="preguntaCiencias(); cambiarFondo('imagenes/ciencia.jpg')">
+            </div>
+        </div>
+
+                <!-- Pregunta: Animales (Magia) -->
+                <div id="pregunta-animales" class="seccion">
+                    <p class="pregunta">¿Cuál de estos animales te representa mas?</p>
+                    <div class="opciones">
+                        <img src="imagenes/perro.PNG" onclick="generarCodigo('magos')">
+                        <img src="imagenes/zorro.PNG" onclick="generarCodigo('hechiceros')">
+                        <img src="imagenes/gato negro.PNG" onclick="generarCodigo('demonio')">
+                        <img src="imagenes/ave.PNG" onclick="generarCodigo('elcoro')">
+                    </div>
+                </div>
+        
+                <!-- Pregunta: A quién salvar (Guerra) -->
+                <div id="pregunta-guerra" class="seccion">
+                    <p class="pregunta">Si tuvieras la oportunidad de salvar a una de tres personas, ¿a quién salvarías?</p>
+                    <div class="opciones">
+                        <img src="imagenes/mujer.PNG" onclick="generarCodigo('sara')">
+                        <img src="imagenes/hombre.PNG" onclick="generarCodigo('bebedor')">
+                        <img src="imagenes/niño.PNG" onclick="generarCodigo('principito')">
+                        <img src="imagenes/hombre1.PNG" onclick="generarCodigo('humano')">
+                    </div>
+                </div>
+        
+                <!-- Pregunta: A qué prefieres dedicarte (Ciencias) -->
+                <div id="pregunta-ciencias" class="seccion">
+                    <p class="pregunta">en ese caso ve a la oficina de quien quieras </p>
+                    <div class="opciones">
+                        <img src="imagenes/doctora.PNG" onclick="generarCodigo('731')">
+                        <img src="imagenes/grey-ghots.PNG" onclick="generarCodigo('fantasma')">
+                        <img src="imagenes/omegon.PNG" onclick="generarCodigo('alpharius')">
+                        <img src="imagenes/makima.PNG" onclick="generarCodigo('bibliomanía')">
+                    </div>
+                </div>        
+        <!-- Resultado final -->
+        <div id="resultado" class="seccion">
+            <p class="pregunta">El entrevistador asiente y continúa la evaluación bien puede continuar con su maestro designado escriba su codigo en el distrito...</p>
+            <p class="codigo" id="codigo-generado"></p>
+            <button class="volver" onclick="window.location.href='libitina.html'">Volver al lobby</button>
+        </div>
+
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll('.seccion').forEach(seccion => seccion.style.display = "none");
+            document.getElementById(id).style.display = "block";
+        }
+
+        function cambiarFondo(imagen) {
+            document.body.style.background = `url('${imagen}') no-repeat center center fixed`;
+            document.body.style.backgroundSize = "cover";
+        }
+
+        function preguntaPasillos() { mostrarSeccion("pregunta-pasillos"); }
+        function preguntaDisculparse() { mostrarSeccion("pregunta-disculparse"); }
+        function preguntaSexo() { mostrarSeccion("pregunta-sexo"); }
+        function preguntaRaza() { mostrarSeccion("pregunta-raza"); }
+        function preguntaImagen() { mostrarSeccion("pregunta-imagen"); }
+        function preguntaAnimales() { mostrarSeccion("pregunta-animales"); }
+        function preguntaGuerra() { mostrarSeccion("pregunta-guerra"); }
+        function preguntaCiencias() { mostrarSeccion("pregunta-ciencias"); }
+
+        function generarCodigo(codigo) {
+            document.getElementById("codigo-generado").innerText = `Código obtenido: ${codigo}`;
+            mostrarSeccion("resultado");
+        }
+
+        // Mostrar la primera pregunta al cargar la página
+        mostrarSeccion("pregunta-inicio");
+    </script>
+
+</body>
+</html>

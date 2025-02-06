@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Registros</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px; 
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            margin: 0;
+         
+            letter-spacing: 2px;
+            color: #e22d2d;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #262626;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #e6e6e6;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff3e3e;
+        }
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+       
+        .elebador {
+            display: grid; /* Activa Grid */
+            grid-template-columns: repeat(4, 2fr); /* 4 columnas de igual tamaño */
+            grid-template-rows: repeat(3, auto); /* 2 filas */
+            gap: 5px; /* Espacio entre elementos */
+            padding: 20px;
+            border: 0px solid black;
+            margin: 40px auto;
+            justify-content: flex-start;
+        }
+
+        .perfil {
+            width: 150px;  /* Tamaño de la imagen */
+            height: 150px; /* Hace que la imagen sea cuadrada */
+            border-radius: 1000%; /* Convierte la imagen en un círculo */  
+            object-fit: cover; /* Recorta la imagen para que encaje bien */
+            display: block;
+            margin: 20px auto; /* Centrar la imagen */
+            border: 0px solid transparent;
+            box-shadow: none;
+            border: none;
+            display: flex; /* Activa Flexbox */
+            justify-content: space-between; /* Distribuye los elementos horizontalmente */
+            align-items: center; /* Alinea los elementos verticalmente */
+            gap: 5px; /* Espacio entre los elementos */
+            padding: 20px;
+            border: 2px solid rgba(0, 0, 0, 0);
+        }
+        .contenido {
+            margin: 20px auto; /* Márgenes superiores e inferiores de 40px, centrado horizontal */
+            padding: 20px; /* Espacio interno */
+            max-width: 900px; /* Ancho máximo del contenido */
+            background: rgba(0, 0, 0, 0); /* Fondo semitransparente para destacar el contenido */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+        .estetica {
+            margin: 20px auto; /* Márgenes superiores e inferiores de 40px, centrado horizontal */
+            padding: 20px; /* Espacio interno */
+            max-width: 1100px; /* Ancho máximo del contenido */
+            background: rgba(0, 0, 0, 0.993); /* Fondo semitransparente para destacar el contenido */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="libitina.html"><img src="imagenes/logo.png" alt="Logotipo Proyecto Libitina" style="height: 300px;"></a>   
+        <h1>Proyecto Libitina - Distritos</h1>    
+    </header>   
+        
+    <main class="estetica">
+        <div class="contenido">
+
+          <h2>Bienvenido Al distrito 0</h2>
+          <p> aqui encontraras una ranura para introducir distintos codigos que te redirigiran a tu destino</p>
+          <main><img src="imagenes/nil.PNG" alt="Imagen misteriosa" style="width: 100%; max-width: 400px;"></main>
+           <p>
+            La tecnología de distritos fue desarrollada por nuestra increíble líder, Katherine Markov, una mente brillante que alcanzó la cima gracias a su extraordinaria investigación y poder.
+
+            La tecnología de distritos, su primera creación, es un sistema de interconexión que une distintos puntos del espacio. 
+            Con esta tecnología, una persona puede viajar de un lugar a otro en cuestión de segundos, 
+            permitiendo que muchas secciones del Proyecto estén ubicadas a metros o incluso kilómetros del Centro de Mando. 
+            Después de todo, con los distritos podemos llegar a esos lugares en segundos y sin problemas.
+          </p>       
+          <main><img src="imagenes/rojo.jpeg" alt="Imagen misteriosa" style="width: 100%; max-width: 600px;"></main>
+          <p>
+            Los códigos de distrito básicos que todo empleado debe saber son tres:
+
+          </p> 
+
+          <p>
+            Distrito 0:Cargar
+            El Distrito 0 es este lugar. Al utilizar el comando "Recargar" aquí, podrás volver a un punto anterior de tu vida. 
+            Solo tú regresarás, y perderás todo lo que haya sucedido después de ese punto. 
+            Al morir por primera vez, el comando "Recargar" también se activará automáticamente. 
+            Sin embargo, esto solo ocurrirá si posees cápsulas de recarga; de lo contrario, morirás de forma definitiva.
+          </p>
+
+          <p>
+            Distrito Exterior: Mapa
+            El Distrito Exterior abarca todas las zonas fuera de las instalaciones del Proyecto. 
+            Si ya has salido previamente, volverás al último lugar donde estuviste. 
+            Si es tu primera vez saliendo, aparecerás en un lugar aleatorio.
+          </p>
+
+          <p>
+            Distrito de Descanso: Guardar
+            El Distrito de Descanso es donde podrás guardar tu progreso. 
+            Al hacerlo, grabarás un punto de tu vida que deseas conservar. 
+            Solo puedes tener tres guardados a la vez; si intentas crear uno nuevo, el más antiguo desaparecerá. 
+            Al guardar, consumirás el 90% de tu maná, y al recargar, volverás al punto de guardado que elijas.
+          </p>
+                 <div class="elebador"> 
+                    <div><img class="perfil" src="imagenes/magia.jpeg" alt="brujas" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/guerra.jpeg" alt="Angeles de la muerte" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/cientifico.jpeg" alt="informmatica" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/humanitario.jpeg" alt="medicina" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/brujas.jpeg" alt="magos" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/escala.jpeg" alt="hechizeros" style="border: none;"></div> 
+                    <div><img class="perfil" src="imagenes/santas.jpeg" alt="santas en vida" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/juger.jpeg" alt="Processors" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/emiteos.jpeg" alt="unidades emiteos de yorha" style="border: none;"></div>
+                    <div><img class="perfil" src="imagenes/handler.jpg" alt="handler" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/astropata.jpg" alt="cantantes de coros" style="height: 150px;"></div>
+                    <div><img class="perfil" src="imagenes/yorha.jpg" alt="yorha" style="border: none;"></div>
+                 </div> 
+
+                 <p>Para iniciar, escriba el código del sitio al que se dirige.</p>
+
+                 <h2>codigo de distrito</h2>
+
+                 <input type="text" id="codigo" placeholder="Ingresa el código">
+                 <button onclick="verificarCodigo()">validar</button>
+             
+            <script>
+                function verificarCodigo() {
+                    let codigoIngresado = document.getElementById("codigo").value.toLowerCase(); // Convierte a minúsculas
+                    let destinos = {
+                        "demonio": "demonio.html",
+                        "lobby": "libitina.html",
+                        "elcoro": "elcoro.html",
+                        "titere": "titere.html",
+                        "humano": "humano.html",
+                        "731": "medicina.html",
+                        "omegon": "informatica.html",
+                        "fantasma": "ingenieria.html",
+                        "bibliomania": "genetica.html",
+                        "imagenEjemplo": "ruta/a/imagen.jpg",
+                        "mapa": "imagenes/mapa.jpeg",
+                        "guardar": "ruta/a/distrito de descanso.png",
+                        "cargar": "ruta/a/Distrito0.jpg",
+                    };  
+             
+                    if (destinos[codigoIngresado]) {
+                            window.location.href = destinos[codigoIngresado]; // Redirige a la página correspondiente
+                    } else {
+                        alert("Código incorrecto. Inténtalo de nuevo."); // Muestra un mensaje si el código es inválido
+                    }
+                     }
+                 </script> 
+                 <main></main>       
+        </div>
+   </main> 
+   <footer>
+    <p>&copy; no creas nada de lo que escuchas y cree solo la mitad de lo que vez.</p>
+</footer> 
+</body>
+</html>
